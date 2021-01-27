@@ -10,6 +10,12 @@ namespace GenericCode
     {
         static void Main(string[] args)
         {
+            ListOfObjects<object> myListOfObjects = new ListOfObjects<object>();
+            myListOfObjects.AbbObject(42);
+            myListOfObjects.AbbObject("Mr. Fantastic");
+            myListOfObjects.AbbObject(true);
+            myListOfObjects.AbbObject(47.11);
+            myListOfObjects.AbbObject("test5");
         }
     }
 }

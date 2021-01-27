@@ -32,14 +32,14 @@ namespace GenericCode
                 return;
             }
             theList[nextIndex] = obj;
-            nextIndex++;
+            nextIndex++;              
         }
 
         /// <summary>
-        /// 
+        /// Om indexet är större än listans längd, alltså 9, skrivs det ut att indexet är för högt och null kommer returneras. 
         /// </summary>
         /// <param name="index"></param>
-        /// <returns></returns>
+        /// <returns> Metoden kommer att returna null. Detta sker när ett tomt objekt returneras. Om indexet inte är för högt så kommer den returnera listans värde på indexet. </returns>
         public T GetObject(int index)
         {
             if (index >= theList.Length)
