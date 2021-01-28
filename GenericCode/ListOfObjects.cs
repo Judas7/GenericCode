@@ -21,11 +21,12 @@ namespace GenericCode
 
 
         /// <summary>
-        /// Om nästa index är större eller lika med längden av listan så skrivs "Array length exceeded" ut.
+        /// AddObject får in ett värde som programmet vill lägga i listan. Om indexet är okej så kommer detta ske.
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="obj"> Värdet från programmet när funktionen kallas på hamnar i obj som senare läggs i listan</param>
         public void AbbObject(T obj)
         {
+            //Om nästa index är större eller lika med längden av listan så skrivs "Array length exceeded" ut. Detta sker alltså när listan är full med objekt.
             if (nextIndex >= theList.Length)
             {
                 Console.WriteLine("Array length exceeded");
@@ -36,12 +37,13 @@ namespace GenericCode
         }
 
         /// <summary>
-        /// Om indexet är större än listans längd, alltså 9, skrivs det ut att indexet är för högt och null kommer returneras. 
+        ///  GetObject får ett index från programmet. Om indexet inte är för högt så kommer den returnera listans värde på indexet. 
         /// </summary>
-        /// <param name="index"></param>
-        /// <returns> Metoden kommer att returna null. Detta sker när ett tomt objekt returneras. Om indexet inte är för högt så kommer den returnera listans värde på indexet. </returns>
+        /// <param name="index">Den tar hand om siffran som kommer när GetObject blir kallad. Den används för att ta ut värdet ur listan från det indexet</param>
+        /// <returns> Metoden kommer att returnera det objekt som ligger på det specifika indexet i listan.</returns>
         public T GetObject(int index)
         {
+            //Om indexet är större än listans längd, alltså 9, skrivs det ut att indexet är för högt och null kommer returneras.
             if (index >= theList.Length)
             {
                 Console.WriteLine("Array index to high");
